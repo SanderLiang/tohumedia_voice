@@ -1,0 +1,24 @@
+# 安装ASR环境
+
+本人用的就是本地环境和使用Anaconda，并创建了Python3.8的虚拟环境，出现安装问题，随时提[issue](https://github.com/yeyupiaoling/PPASR/issues)。
+
+ - 首先安装的是Pytorch 1.12.1的GPU版本，如果已经安装过了，请跳过。
+```shell
+conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
+```
+
+ - 安装ASR库。
+
+使用pip安装，命令如下：
+```shell
+python -m pip install asr -U -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+源码安装，源码安装能保证使用最新代码。
+```shell
+git clone https://github.com/yeyupiaoling/asr.git
+cd asr
+python setup.py install
+```
+
+**注意：** 如果出现LLVM版本错误，解决办法[LLVM版本错误](./faq.md)。
